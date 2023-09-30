@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link href="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a asp-area=""asp-controller="ECommerce"asp-action="Index"class="nav-link">ECommerce</a>
+        <button type="button"class="navbar-toggler"data-toggle="collapse"data-target="#navbarResponse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"id="navbarResponse">
+            <ul class="navbar-nav w-75">
+                <form>
+                    <input type="search"class="form-control"placeholder="Search"/>
+                    <button type="button"class="btn btn-outline-success">Search</button>
+                </form>
+            </ul>
+            <div class="me-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Account" asp-action="Login"class="nav-link">Sign In</a>                        
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area=""asp-controller="Account"asp-action="Register">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
